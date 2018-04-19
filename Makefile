@@ -1,6 +1,3 @@
-datasets/enwiki.labeled_wikiprojects.json:
-	wget https://ndownloader.figshare.com/files/9828517 -qO- > $@
-
 labels-config.json: \
 	datasets/enwiki.labeled_wikiprojects.json
 	cat $< | \

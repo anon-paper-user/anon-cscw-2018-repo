@@ -47,3 +47,23 @@ Additionally also pass the mid-level wikiprojects json for the script to
 generate wikiprojects to mid-level categories mapping. The script augments the
 given list with the mentioned fields, writing them to a new file specified by
 **"output"**
+
+## Training a gradient boosting model
+
+### Generate label config file
+
+```
+make labels-config.json
+```
+
+### Extract the features from the rev ids
+
+```
+make datasets/enwiki.labeled_wikiprojects.w_cache.json
+```
+
+### Train the gradient boosting model
+
+```
+make models/enwiki.drafttopic.gradient_boosting.model
+```
